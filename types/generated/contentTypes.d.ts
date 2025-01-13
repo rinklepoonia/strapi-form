@@ -505,6 +505,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiFormForm extends Struct.CollectionTypeSchema {
   collectionName: 'forms';
   info: {
+    description: '';
     displayName: 'Form';
     pluralName: 'forms';
     singularName: 'form';
@@ -522,7 +523,7 @@ export interface ApiFormForm extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'> &
       Schema.Attribute.Private;
-    Number: Schema.Attribute.Integer;
+    Number: Schema.Attribute.BigInteger;
     Password: Schema.Attribute.Password;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
